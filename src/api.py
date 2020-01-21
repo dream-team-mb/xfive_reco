@@ -17,7 +17,7 @@ class Items(BaseModel):
 
 
 class ItemsOutput(BaseModel):
-    item_ids: List[str] = []
+    recommended_products: List[str] = []
 
 
 @app.get('/ready',
@@ -37,7 +37,7 @@ def recommend(user_items: Items):
     - **user_items**: IDs of user items
     """
     recommended = app.reco.recommend(user_items.ids)
-    return {'item_ids': recommended}
+    return {'recommended_products': recommended}
 
 
 if __name__ == '__main__':
