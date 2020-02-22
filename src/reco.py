@@ -5,8 +5,9 @@ from typing import List
 class Reco:
     def __init__(self, file_path: str = None):
         if file_path:
-            with open(file_path, 'rb') as f:
-                self.model = pickle.load(f)['estimator']
+            pass
+            # with open(file_path, 'rb') as f:
+            #     self.model = pickle.load(f)['estimator']
 
     def recommend(self, user_items: List[str]) -> List[int]:
         return [

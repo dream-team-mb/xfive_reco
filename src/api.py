@@ -1,6 +1,5 @@
 import os
-import sys
-from typing import List, Union
+from typing import List
 
 import uvicorn
 from fastapi import FastAPI
@@ -42,4 +41,4 @@ def recommend(user_items: Items):
 
 if __name__ == '__main__':
     app.reco = Reco(f'{config.WORK_DIR}{config.MODEL_FILE}')
-    uvicorn.run(app, host='0.0.0.0',port=int(os.environ.get('PORT', 8080)))
+    uvicorn.run(app, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))

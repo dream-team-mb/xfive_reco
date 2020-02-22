@@ -19,4 +19,4 @@ COPY src /app/src
 
 EXPOSE 8080
 
-ENTRYPOINT ["python", "api.py"]
+ENTRYPOINT ["python", "src/api.py"]
