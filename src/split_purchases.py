@@ -4,7 +4,7 @@ import config as cfg
 import pandas as pd
 
 
-def split_data_to_chunks(purchases_csv_path, output_jsons_dir, n_shards):
+def split_data_to_chunks(purchases_csv_path, output_jsons_dir):
     pass
 
 
@@ -31,9 +31,7 @@ if __name__ == "__main__":
     purchases_csv_path = cfg.PURCHASE_CSV_PATH
     output_jsons_dir = cfg.JSONS_DIR
 
-    split_data_to_chunks(
-        purchases_csv_path, output_jsons_dir, n_shards=16,
-    )   
+    split_data_to_chunks(purchases_csv_path, output_jsons_dir)
 
     # check splitting for correctness
     _from_input = calculate_unique_clients_from_input(purchases_csv_path)
